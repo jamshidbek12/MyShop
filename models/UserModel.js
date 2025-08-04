@@ -21,6 +21,10 @@ const userSchema = new Schema(
       trim: true, // Optional: Allow empty bio
       maxlength: 500, // Optional: Limit the length of the bio
     },
+    profileImg: {
+      type: String,
+      default: "", // Optional: Default to an empty string
+    },
     password: {
       type: String,
       required: true,
