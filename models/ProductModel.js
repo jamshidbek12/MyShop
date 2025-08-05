@@ -21,6 +21,10 @@ const productSchema = new Schema(
       type: String,
       required: true,
     },
+    createdBy: {
+      type: Schema.Types.ObjectId,
+      ref: "User", // Reference to the User model
+    },
   },
   {
     timestamps: true, // Automatically manage createdAt and updatedAt fields
