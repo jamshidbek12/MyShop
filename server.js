@@ -22,5 +22,6 @@ app.use("/api/comments", CommentRoutes);
 
 app.listen(PORT, () => {
   connectDB();
+
   console.log(`Server is running on port ${PORT}`);
 });

@@ -5,7 +5,7 @@ export async function getAllProducts(req, res) {
     const products = await Product.find().populate("createdBy", "username");
     res.json(products);
   } catch (error) {
-    console.error("Error fetching products:", error);
+    console.error("Error fetching in getAllProducts:", error);
     res.status(500).json({
       error: "Internal server error",
     });
@@ -57,7 +57,7 @@ export async function addProduct(req, res) {
       data: newProduct,
     });
   } catch (error) {
-    console.error("Error adding product:", error);
+    console.error("Error in addProduct:", error);
     res.status(500).json({
       error: "Internal server error",
     });
